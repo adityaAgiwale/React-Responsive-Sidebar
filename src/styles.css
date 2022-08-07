@@ -1,0 +1,188 @@
+.App {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Home */
+.home-center {
+  padding: 20px 100px 0px;
+}
+
+.menuIcon {
+  font-size: 40px;
+  cursor: pointer;
+}
+.modelButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.openModelButton {
+  padding: 15px 35px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  font-size: 22px;
+  border: 1px solid black;
+}
+.openModelButton:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* Model */
+.modelCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 200px;
+}
+.model-box {
+  display: none;
+}
+.show-model-box {
+  width: 500px;
+  height: 300px;
+  background-color: grey;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modelCancelButton {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+.modelCancelButton:hover {
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar-main {
+  width: 0;
+  display: none;
+}
+.sidebar {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.show-sidebar-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  color: white;
+}
+
+.menuList {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.socialIconList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuLinkList,
+.socialMediaList {
+  list-style: none;
+}
+.menuLinkItems > a,
+.socialMediaItems > a {
+  text-decoration: none;
+  color: white;
+}
+.sidebarCancelButton {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+@media (max-width: 675px) {
+  /* Home */
+  .home-center {
+    padding: 20px 0px 20px 20px;
+  }
+
+  .menuIcon {
+    font-size: 35px;
+  }
+  .modelButton {
+    top: 50%;
+    left: 25%;
+  }
+  .openModelButton {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  /* Model */
+  .modelCenter {
+    margin: 5px;
+    margin-top: 120px;
+  }
+
+  .show-model-box {
+    border-radius: 10px;
+  }
+  .modelCancelButton {
+    top: 30px;
+    right: 30px;
+  }
+
+  /* Sidebar */
+  .show-sidebar-main {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+  }
+
+  .menuLinkItems > a,
+  .socialMediaItems > a {
+    font-size: 20px;
+  }
+  .sidebarCancelButton {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 675px) {
+  /* Home */
+  .show-sidebar-main {
+    width: 40%;
+    position: fixed;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* Home */
+  .show-sidebar-main {
+    width: 25%;
+    position: fixed;
+    z-index: 10;
+  }
+}
